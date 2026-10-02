@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SB Mobile | Tienda Online</title>
+  <meta name="description" content="SB Mobile - Accesorios para iPhone, cargadores, cables, fundas y audio en San Juan.">
+  <link rel="icon" type="image/png" sizes="256x256" href="assets/favicon.png?v=3">
+<link rel="shortcut icon" href="assets/favicon.ico?v=3">
+<link rel="apple-touch-icon" href="assets/favicon.png?v=3">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement">📦 Envíos a domicilio en Gran San Juan · Consultá disponibilidad</div>
+
+  <header class="header">
+    <button class="menu-btn" id="openMenu" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    <a class="brand" href="#inicio" aria-label="SB Mobile inicio">
+      <img src="assets/logo.png" alt="SB Mobile">
+    </a>
+    <button class="cart-btn" id="openCart" aria-label="Abrir carrito">🛒 <span>Carrito</span><b id="cartCount">0</b></button>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow">SB MOBILE · SAN JUAN</p>
+        <h1>Tecnología.<br><span>Calidad. Confianza.</span></h1>
+        <p>Accesorios para tu iPhone y audio para todos los días.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#productos">Ver productos</a>
+          <a class="btn secondary" id="heroWhatsapp" href="#" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-logo-wrap"><img src="assets/logo.png" alt="SB Mobile"></div>
+        <div class="hero-pill">STOCK ACTUALIZADO</div>
+        <p>Consultá modelos, precios y disponibilidad.</p>
+      </div>
+    </section>
+
+    <section class="categories section">
+      <div class="section-head">
+        <div><p class="eyebrow">EXPLORÁ</p><h2>Categorías</h2></div>
+      </div>
+      <div class="category-grid">
+        <button data-category="Fundas">📱<span>Fundas</span></button>
+        <button data-category="Cargadores">⚡<span>Cargadores</span></button>
+        <button data-category="Cables">🔌<span>Cables</span></button>
+        <button data-category="Audio">🎧<span>Audio</span></button>
+        <button data-category="Combos">🔥<span>Combos</span></button>
+      </div>
+    </section>
+
+    <section class="section products-section" id="productos">
+      <div class="section-head">
+        <div><p class="eyebrow">CATÁLOGO</p><h2>Productos</h2></div>
+        <div class="tools">
+          <input id="search" type="search" placeholder="Buscar producto...">
+          <select id="categoryFilter">
+            <option value="Todos">Todas las categorías</option>
+            <option>Fundas</option><option>Cargadores</option><option>Cables</option><option>Audio</option><option>Combos</option>
+          </select>
+        </div>
+      </div>
+      <div id="loading" class="loading">Cargando stock...</div>
+      <div id="productGrid" class="product-grid"></div>
+      <div id="emptyState" class="empty hidden">No encontramos productos con esa búsqueda.</div>
+    </section>
+
+    <section class="promo section" id="combos">
+      <div>
+        <p class="eyebrow">COMBOS</p>
+        <h2>Armá tu compra completa.</h2>
+        <p>Opciones pensadas para cargar, proteger y disfrutar tu iPhone.</p>
+      </div>
+      <a class="btn primary" href="#productos" data-jump-combos>Ver combos</a>
+    </section>
+
+    <section class="about section" id="nosotros">
+      <div class="about-copy">
+        <p class="eyebrow">SOBRE NOSOTROS</p>
+        <h2>Accesorios para tu iPhone, con atención de verdad.</h2>
+        <p>SB Mobile nació en San Juan para ofrecerte accesorios para iPhone y audio de calidad, y próximamente más productos, con atención personalizada y asesoramiento antes y después de tu compra.</p>
+        <p>Empezamos hace poco y en este tiempo más de 50 personas ya confiaron en nosotros y quedaron conformes con sus productos. Queremos que vos seas el próximo.</p>
+        <a class="btn primary" id="aboutWhatsapp" href="#" target="_blank" rel="noopener">Escribinos por WhatsApp</a>
+      </div>
+      <div class="about-stats">
+        <div><strong>+50</strong><span>clientes satisfechos</span></div>
+        <div><strong>iPhone y audio</strong><span>de calidad · próximamente más productos</span></div>
+        <div><strong>San Juan</strong><span>envíos en Gran San Juan · próximamente envíos a todo el país</span></div>
+      </div>
+    </section>
+
+    <section class="trust section" id="informacion">
+      <div class="trust-card"><span>🚚</span><h3>Envíos</h3><p>Gran San Juan. Consultá disponibilidad y costo según ubicación.</p></div>
+      <div class="trust-card"><span>💳</span><h3>Pagos</h3><p>Efectivo, transferencia y efectivo USD según producto.</p></div>
+      <div class="trust-card"><span>🤝</span><h3>Atención personalizada</h3><p>Te ayudamos a elegir el producto que necesitás.</p></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img src="assets/logo.png" alt="SB Mobile">
+    <p>Tecnología. Calidad. Confianza.</p>
+    <div><a href="#productos">Productos</a><a id="footerWhatsapp" href="#" target="_blank">WhatsApp</a><a href="https://www.instagram.com/sbmobile_/" target="_blank" rel="noopener">Instagram</a></div>
+    <small>© <span id="year"></span> SB Mobile · San Juan, Argentina</small>
+  </footer>
+
+  <div class="menu-backdrop" id="menuBackdrop"></div>
+  <aside class="side-menu" id="sideMenu" aria-label="Menú" aria-hidden="true">
+    <div class="side-head">
+      <img src="assets/logo.png" alt="SB Mobile">
+      <button id="closeMenu" aria-label="Cerrar menú">✕</button>
+    </div>
+    <nav class="side-nav">
+      <a href="#inicio" style="--i:0"><i>🏠</i>Inicio</a>
+      <a href="#productos" style="--i:1"><i>🛍️</i>Productos</a>
+      <a href="#combos" style="--i:2"><i>🔥</i>Combos</a>
+      <a href="#nosotros" style="--i:3"><i>🤝</i>Sobre nosotros</a>
+      <a href="#informacion" style="--i:4"><i>🚚</i>Envíos y pagos</a>
+    </nav>
+    <div class="side-foot">
+      <a class="btn primary" id="sideWhatsapp" href="#" target="_blank" rel="noopener">Escribinos por WhatsApp</a>
+      <a class="btn secondary" href="https://www.instagram.com/sbmobile_/" target="_blank" rel="noopener">Instagram</a>
+      <small>TECNOLOGÍA · CALIDAD · CONFIANZA</small>
+    </div>
+  </aside>
+
+  <div class="drawer-backdrop hidden" id="drawerBackdrop"></div>
+  <aside class="cart-drawer hidden" id="cartDrawer" aria-label="Carrito">
+    <div class="drawer-head"><h2>Tu carrito</h2><button id="closeCart">✕</button></div>
+    <div id="cartItems"></div>
+    <div class="cart-summary">
+      <div><span>Subtotal</span><strong id="cartTotal">$0</strong></div>
+      <p>El envío se coordina según ubicación.</p>
+      <button class="btn primary full" id="checkoutBtn">Finalizar compra</button>
+      <button class="btn secondary full" id="clearCart">Vaciar carrito</button>
+    </div>
+  </aside>
+
+  <div class="modal hidden" id="checkoutModal">
+    <div class="modal-card">
+      <button class="modal-close" id="closeCheckout">✕</button>
+      <p class="eyebrow">SB MOBILE</p>
+      <h2>Finalizar pedido</h2>
+      <p class="muted">Completá tus datos. El pedido quedará registrado y luego coordinamos el pago y la entrega.</p>
+      <form id="checkoutForm">
+        <label>Nombre y apellido<input name="nombre" required maxlength="80"></label>
+        <label>WhatsApp<input name="telefono" required maxlength="30" placeholder="Ej. 264 555 5555"></label>
+        <label>Modelo de iPhone / detalle<select name="modelo"><option>Consultar</option><option>iPhone 13</option><option>iPhone 14</option><option>iPhone 15</option><option>iPhone 16</option><option>iPhone 17</option><option>Otro / no corresponde</option></select></label>
+        <label>Entrega<select name="entrega"><option>Retiro / coordinar</option><option>Envío a domicilio</option><option>Uber Moto</option><option>DiDi</option></select></label>
+        <label>Medio de pago<select name="pago"><option>Transferencia</option><option>Efectivo</option><option>Efectivo USD</option></select></label>
+        <label>Notas<textarea name="notas" rows="3" placeholder="Modelo de funda, cable C-C o C-Lightning, etc."></textarea></label>
+        <div class="order-preview"><span>Total</span><strong id="checkoutTotal">$0</strong></div>
+        <button class="btn primary full" type="submit">Confirmar pedido</button>
+      </form>
+      <p id="checkoutStatus" class="status"></p>
+    </div>
+  </div>
+
+  <iframe name="orderFrame" id="orderFrame" class="hidden-frame"></iframe>
+  <script>
+    window.SB_CONFIG = {
+      whatsapp: "5492646282318",
+      appsScriptUrl: "https://script.google.com/macros/s/AKfycbzf_wekOYLOCpwKgXuNlqrUBQ6WGPSLm3Xb1uMLF-8Mi8KdYd47Cf7FuVOZrTTCUb0MRA/exec",
+      currency: "ARS"
+    };
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>
